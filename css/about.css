@@ -1,0 +1,45 @@
+body{
+  background-image: url("../img/stars.png");
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 100vh;
+}
+h2{
+  margin: 0.5rem auto 0.5rem auto;
+  width: 70%;
+}
+p{
+  margin: 0 1rem 0 1rem;
+}
+article {
+  margin-left: 0;
+  height: 78vh;
+  margin-top: 0;
+  overflow: hidden;
+  width: 80vw;
+}
+article>article{
+  width: 101.5%;
+  height: 98%;
+  overflow-y: scroll;
+}
+
+/* -------------------------------------- */
+/* -------------------------------------- */
+/* ----------Wide-screen css------------- */
+@media screen and (min-width: 600px) {
+
+    article {
+        margin: auto;
+        width: 95%;
+        height: 60vh;
+    }
+    p{
+      width: 80%;
+      margin: 0 auto;
+    }
+}
+
+/* ----------Wide-screen css------------- */
+/* -------------------------------------- */
+/* -------------------------------------- */

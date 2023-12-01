@@ -1,0 +1,21 @@
+@import 'colors.css';
+
+body{
+  height: 100vh;
+  background-image: url(../img/mobile/brittle-hollow-vibes-mobile.png);
+  background-repeat: no-repeat;
+  background-size:100% 100%;
+  background-position: left top;
+}
+
+/* -------------------------------------- */
+/* -------------------------------------- */
+/* ----------Wide-screen css------------- */
+@media screen and (min-width: 600px) {
+  body{    
+    background-image: url(../img/brittle-hollow-vibes.png);
+  }
+}
+/* ----------Wide-screen css------------- */
+/* -------------------------------------- */
+/* -------------------------------------- */

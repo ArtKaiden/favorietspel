@@ -1,0 +1,93 @@
+@import "../css/colors.css";
+body {
+  background-image: url(../img/stars.png);
+  background-size: 100vw 100vh;
+  background-position: left top;
+}
+iframe{
+  border: none;
+  width: 90%;
+  height:100%;
+}
+
+section>div img {
+  display: block;
+  width: 10vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+section>div{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+button{
+  background-color: var(--header-color);
+  font-size: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px;
+}
+button:active {
+  box-shadow: -2px -2px 4px;
+}
+section{
+  margin-left: 0;
+  width: 80vw;
+  margin-top: 0.5rem;
+}
+main section:nth-child(3){
+  display: none;
+  height: 32vh;
+  width: 45vw;
+}
+main section:nth-child(4){
+  position: absolute;
+  bottom: 15vh;
+  right: 20vw;
+  height: 40vh;
+}
+main section:nth-child(4) article{
+  background-color: rgba(0, 0, 0, 0);
+  margin: 0 auto;
+}
+main section:nth-child(4) article ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+main section:nth-child(4) article ul li{
+  margin-top: 2rem;
+}
+
+/* -------------------------------------- */
+/* -------------------------------------- */
+/* ----------Wide-screen css------------- */
+@media screen and (min-width: 600px) {
+  section{
+    margin: 0 auto 0 auto;
+    width: 85vw;
+  }
+  section>div img{
+    width: 8vw;
+  }
+  main section:nth-child(3){
+    display: block;
+  }
+  
+  main section:nth-child(4) article ul li{
+    margin-top: 1rem;
+  }
+  main section:nth-child(4){
+    right: 0;
+    bottom: 10vh;
+    width: 25vw;
+    height: 30vh;
+  }
+}
+
+/* ----------Wide-screen css------------- */
+/* -------------------------------------- */
+/* -------------------------------------- */

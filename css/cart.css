@@ -1,0 +1,131 @@
+body {
+  background-image: url(../img/stars.png);
+  background-size: 100vw 100vh;
+  background-position: left top;
+}
+h1{
+  margin: 0 auto 0 0;
+}
+h2{
+  margin: 1rem 1rem 1rem 0;
+}
+input {
+  background-color: grey;
+  color: black;
+  font-weight: bold;
+  margin: 1px 2rem 1px 0;
+}
+p {
+  margin: 0;
+}
+section {
+  margin: 0;
+  width: 80vw;
+  height: 40vh;
+}
+section + section {
+  margin: 4rem 0 0 0;
+  width: 80vw;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+article {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+section article{
+  background-color: rgba(0, 0, 0, 0);
+}
+main>div>div>section:last-child div{
+  display: grid;
+  justify-items: start;
+}
+main>div>div>section:last-child article {
+  padding: 0 0.8rem;
+  height: max-content
+}
+form input::placeholder{
+  color: rgb(63, 63, 63);
+}
+form div:last-child input{
+  display: none;
+}
+button {
+  margin: 1rem auto;
+  grid-column-start: span 2;
+  background-color: var(--header-color);
+  font-size: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px;
+}
+button:active {
+  box-shadow: -2px -2px 4px;
+}
+section article div h2,
+section article div h3
+{
+  grid-column-start: span 2;
+}
+main>div>div>section:last-child form div:nth-last-child(2){
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.scroll-container{
+  height: 85vh;
+  width: 80vw;
+  overflow: hidden;
+}
+.scroll-container > div {
+  width: 1110%;
+  height: 99%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  overflow-y: scroll;
+  border-radius: 1rem;
+}
+.form img{
+  height: 90%;
+}
+.form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 30%;
+}
+
+
+/* -------------------------------------- */
+/* -------------------------------------- */
+/* ----------Wide-screen css------------- */
+@media screen and (min-width: 600px) {
+  .scroll-container {
+    width: 90vw;
+  }
+  .scroll-container > div {
+    width: 90vw;
+    overflow-y: hidden;
+    border: none;
+    flex-direction: row;
+    margin-top: 2rem;
+  }
+  section {
+    margin: 0.5rem 1rem 0 1rem;
+    width: 65vw;
+    height: 60vh;
+  }
+  section + section {
+    margin: 0.5rem 1rem 0 1rem;
+    width: 35vw;
+    height: 80vh;
+  }
+  
+  .scroll-container > div > section:last-child div {
+    grid-template-columns: 2fr 3fr;
+  }
+}
+/* ----------Wide-screen css------------- */
+/* -------------------------------------- */
+/* -------------------------------------- */

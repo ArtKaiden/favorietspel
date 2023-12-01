@@ -1,0 +1,166 @@
+@import "colors.css";
+
+body {
+  background-color: black;
+  font-family: "itc_serif_gothicextra_bold";
+  color: var(--text-color);
+  overflow: hidden;
+}
+h1,
+h2 {
+  font-family: "itc_serif_gothicheavy";
+  margin-bottom: 1vh;
+}
+nav {
+  display: grid;
+}
+nav ul {
+  display: grid;
+  position: relative;
+  background-color: rgba(25, 25, 25, 0.337);
+  box-shadow: 5px 5px 20px rgb(22, 22, 22);
+  border-radius: 0 0 2rem 2rem;
+  padding: 0 1rem;
+  margin: 0;
+  z-index: 5;
+}
+nav li {
+  list-style-type: none;
+  height: 10vh;
+  display: flex;
+}
+nav ul ~ ul {
+  display: grid;
+}
+nav img {
+  align-self: center;
+  justify-self: center;
+  max-width: 100%;
+  max-height: 100%;
+}
+nav ul a {
+  display: flex;
+  text-decoration: none;
+}
+main {
+  max-height: 100%;
+}
+article, section{
+  text-align: center;
+  width: 70%;
+  margin-top: 5vh;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+}
+article strong {
+  color: var(--important-color);
+}
+h1 {
+  color: var(--important-color);
+  margin-left: 2rem;
+}
+h2 {
+  color: var(--header-color);
+  border-bottom: 1px solid;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 2rem;
+}
+h3 {
+  color: var(--header-color);
+  margin: 0;
+}
+figure img {
+  max-width: 100%;
+  max-height: 100%;
+}
+figure {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+footer small {
+  position: absolute;
+  right: 0.4vw;
+  bottom: 1vh;
+  padding: 1rem;
+  border-radius: 5rem;
+  opacity: 30%;
+  z-index: 5;
+}
+.grip {
+  background-image: url("../img/Outer-wilds-ventures-outline.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: background-image 1s;
+  z-index: 5;
+}
+
+nav:hover .grip {
+  background-image: url("../img/Outer-wilds-ventures.png");
+  transition: 2s;
+}
+.hover-me {
+  position: absolute;
+  bottom: 5vh;
+  right: 1vw;
+  padding: 0.5rem;
+  border: solid var(--line-color);
+  opacity: 30%;
+  border-radius: 20px;
+  z-index: 10;
+}
+.invisible {
+  visibility: hidden;
+}
+/* -------------------------------------- */
+/* -------------------------------------- */
+/* ----------Wide-screen css------------- */
+
+@media screen and (min-width: 600px) {
+  nav {
+    grid-template-columns: 45% 6% 44%;
+  }
+  nav ul {
+    top: -19vh;
+    transition: top 2s;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
+    max-height: 10vw;
+  }
+  nav ul ~ ul {
+    width: 26vw;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  article, section{
+    background-color: var(--div-color);
+  }
+  nav ul li img:hover {
+    position: relative;
+    top: 5px;
+  }
+  nav:hover ul {
+    top: 0vh;
+    transition: top 1s;
+  }
+  footer img{
+    width: 35vw;
+    height: 20vh;
+  }
+}
+
+
+
+/* ----------Wide-screen css------------- */
+/* -------------------------------------- */
+/* -------------------------------------- */

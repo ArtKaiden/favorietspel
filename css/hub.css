@@ -1,0 +1,651 @@
+@import "colors.css";
+
+body {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: left top;
+  color: var(--text-color);
+  background-image: url(../img/mobile/Chart2-no-planets-mobile.png);
+}
+main li {
+  list-style: none;
+  background-size: 100% 100%;
+  position: absolute;
+}
+main li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+main li p {
+  visibility: hidden;
+  margin: 0;
+}
+main li:hover > p {
+  visibility: visible;
+}
+footer img{
+  z-index: 1;
+}
+.twins {
+  height: 5vh;
+  width: 16vw;
+  left: 43vw;
+  top: 78.3vh;
+  background-image: url(../img/mobile/twins-img-mobile.png);
+}
+.timber {
+  height: 6.5vh;
+  width: 12vw;
+  left: 45vw;
+  top: 64.8vh;
+  background-image: url(../img/mobile/timber-hearth-img-mobile.png);
+}
+.hollow {
+  height: 8.7vh;
+  width: 16vw;
+  left: 43.7vw;
+  top: 44.9vh;
+  background-image: url(../img/mobile/brittle-hollow-img-mobile.png);
+}
+
+.giants {
+  height: 13vh;
+  width: 26vw;
+  left: 38vw;
+  top: 21vh;
+  background-image: url(../img/mobile/giants-deep-img-mobile.png);
+}
+.bramble {
+  height: 15vh;
+  width: 24.9vw;
+  left: 36.3vw;
+  top: 1.7vh;
+  background-image: url(../img/mobile/dark-bramble-img-mobile.png);
+}
+.interloper {
+  height: 19vh;
+  width: 18.7vw;
+  left: 2.9vw;
+  top: 0.2vh;
+  background-image: url(../img/mobile/interloper-img-mobile.png);
+}
+
+/* -------------------------------------- */
+/* -------------------------------------- */
+/* -------------Animations--------------- */
+.twins {
+  animation: twins-around-sun 15.4s linear infinite;
+}
+.timber {
+  animation: around-sun-1 8.9s linear infinite reverse;
+}
+.hollow {
+  animation: around-sun-2 15s linear infinite reverse;
+}
+.giants {
+  animation: around-sun-1 13s linear infinite;
+}
+.bramble {
+  animation: around-sun-2 16s linear infinite;
+}
+.interloper {
+  animation: interloper-around-sun 6s linear infinite;
+}
+.clickable:hover {
+  animation-play-state: paused;
+}
+/* ------------Animations---------------- */
+/* -------------------------------------- */
+/* -------------------------------------- */
+
+
+/* -------------------------------------- */
+/* -------------------------------------- */
+/* ----------Keyframes Mobile------------ */
+
+@keyframes twins-around-sun{
+  0% {
+    transform: translate(0, 0);
+  }
+  2% {
+    transform: translate(60%,5%) rotate(30deg);
+  }
+  4% {
+    transform: translate(120%,25%) rotate(60deg);
+  }
+  6% {
+    transform: translate(180%,50%) rotate(90deg);
+  }
+  8% {
+    transform: translate(225%,100%) rotate(120deg);
+  }
+  10% {
+    transform: translate(275%,190%) rotate(150deg);
+  }
+  12% {
+    transform: translate(325%, 280%) rotate(180deg);
+  }
+  14% {
+    transform: translate(360%, 360%) rotate(210deg);
+  }
+  16% {
+    transform: translate(400%, 430%) rotate(240deg);
+  }
+  18% {
+    transform: translate(450%, 500%)  rotate(300deg);
+  }
+  20% {
+    visibility: hidden;
+    transform: translate(500%,500%) rotate(330deg);
+  }
+  21% {
+    visibility: hidden;
+    transform: translate(-500%,500%) rotate(-330deg);
+  }
+  80% {
+    visibility: visible;
+    transform: translate(-480%, 500%) rotate(-300deg);
+  }
+  82% {
+    transform: translate(-420%, 500%) rotate(-270deg);
+  }
+  84% {
+    transform: translate(-375%, 430%) rotate(-240deg);
+  }
+  86% {
+    transform: translate(-340%, 360%) rotate(-210deg);
+  }
+  88% {
+    transform: translate(-300%, 280%) rotate(-180deg);
+  }
+  90% {
+    transform: translate(-260%, 190%) rotate(-150deg);
+  }
+  92% {
+    transform: translate(-225%, 100%) rotate(-120deg);
+  }
+  94% {
+    transform: translate(-180%, 50%) rotate(-90deg);
+  }
+  96% {
+    transform: translate(-120%, 25%) rotate(-60deg);
+  }
+  98% {
+    transform: translate(-60%, 5%) rotate(-30deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+@keyframes around-sun-1{
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  2% {
+    transform: translate(60%, 5%) rotate(-25deg);
+  }
+  4% {
+    transform: translate(120%, 15%) rotate(-50deg);
+  }
+  6% {
+    transform: translate(165%, 25%) rotate(-75deg);
+  }
+  8% {
+    transform: translate(225%, 40%) rotate(-100deg);
+  }
+  10% {
+    transform: translate(275%, 55%) rotate(-125deg);
+  }
+  12% {
+    transform: translate(325%, 70%) rotate(-150deg);
+  }
+  14% {
+    transform: translate(375%, 90%) rotate(-175deg);
+  }
+  16% {
+    transform: translate(425%, 140%) rotate(-200deg);
+  }
+  18% {
+    transform: translate(500%, 175%) rotate(-225deg);
+  }
+  20% {
+    visibility: hidden;
+    transform: translate(580%, 225%) rotate(-250deg);
+  }
+  21% {
+    visibility: hidden;
+    transform: translate(-580%, 250%) rotate(275deg);
+  }
+  80% {
+    visibility: visible;
+    transform: translate(-580%, 225%) rotate(250deg);
+  }
+  82% {
+    transform: translate(-500%, 175%) rotate(225deg);
+  }
+  84% {
+    transform: translate(-425%, 140%) rotate(200deg);
+  }
+  86% {
+    transform: translate(-375%, 90%) rotate(175deg);
+  }
+  88% {
+    transform: translate(-325%, 70%) rotate(150deg);
+  }
+  90% {
+    transform: translate(-275%, 55%) rotate(125deg);
+  }
+  92% {
+    transform: translate(-225%, 40%) rotate(100deg); 
+  }
+  94% {
+    transform: translate(-165%, 25%) rotate(75deg);
+  }
+  96% {
+    transform: translate(-120%, 15%) rotate(50deg);
+  }
+  98% {
+    transform: translate(-60%, 5%)rotate(25deg); 
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes around-sun-2{
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  2% {
+    transform: translate(60%, 5%) rotate(20deg);
+  }
+  4% {
+    transform: translate(120%, 15%) rotate(40deg);
+  }
+  6% {
+    transform: translate(165%, 25%) rotate(60deg);
+  }
+  8% {
+    transform: translate(225%, 40%) rotate(80deg);
+  }
+  10% {
+    transform: translate(275%, 55%) rotate(100deg);
+  }
+  12% {
+    transform: translate(325%, 70%) rotate(120deg);
+  }
+  14% {
+    transform: translate(375%, 90%) rotate(140deg);
+  }
+  16% {
+    transform: translate(425%, 140%) rotate(160deg);
+  }
+  18% {
+    transform: translate(500%, 175%) rotate(180deg);
+  }
+  20% {
+    visibility: hidden;
+    transform: translate(580%, 225%) rotate(200deg);
+  }
+  21% {
+    visibility: hidden;
+    transform: translate(-580%, 250%) rotate(-200deg);
+  }
+  80% {
+    visibility: visible;
+    transform: translate(-580%, 225%) rotate(-200deg);
+  }
+  82% {
+    transform: translate(-500%, 175%) rotate(-180deg);
+  }
+  84% {
+    transform: translate(-425%, 140%) rotate(-160deg);
+  }
+  86% {
+    transform: translate(-375%, 90%) rotate(-140deg);
+  }
+  88% {
+    transform: translate(-325%, 70%) rotate(-120deg);
+  }
+  90% {
+    transform: translate(-275%, 55%) rotate(-100deg);
+  }
+  92% {
+    transform: translate(-225%, 40%) rotate(-80deg); 
+  }
+  94% {
+    transform: translate(-165%, 25%) rotate(-60deg);
+  }
+  96% {
+    transform: translate(-120%, 15%) rotate(-40deg);
+  }
+  98% {
+    transform: translate(-60%, 5%)rotate(-20deg); 
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+@keyframes interloper-around-sun {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(-150%, 150%);
+  }
+  50% {
+    transform: translate(-150%, -150%);
+  }
+  75% {
+    transform: translate(200%, -150%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+/* ----------Keyframes Mobile------------ */
+/* -------------------------------------- */
+/* -------------------------------------- */
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* -------------------------------------- */
+/* -------------------------------------- */
+/* ----------Wide-screen css------------- */
+@media screen and (min-width: 600px) {
+  body {
+    background-image: url(../img/Chart2-no-planets.png);
+  }
+  .twins {
+    height: 12.3vh;
+    width: 3.6vw;
+    left: 18.9vw;
+    top: 44.25vh;
+    background-image: url(../img/twins-img.png);
+  }
+
+  .timber {
+    height: 9.9vh;
+    width: 5vw;
+    left: 30.7vw;
+    top: 45.9vh;
+    background-image: url(../img/timber-hearth-img.png);
+  }
+
+  .hollow {
+    height: 12.5vh;
+    width: 6.5vw;
+    left: 47.7vw;
+    top: 44.5vh;
+    background-image: url(../img/brittle-hollow-img.png);
+  }
+
+  .giants {
+    height: 24vh;
+    width: 11vw;
+    left: 67.5vw;
+    top: 38.8vh;
+    background-image: url(../img/giants-deep-img.png);
+  }
+  .bramble {
+    height: 25.3vh;
+    width: 12vw;
+    left: 85.15vw;
+    top: 37.25vh;
+    background-image: url(../img/dark-bramble-img.png);
+  }
+  .interloper {
+    height: 19vh;
+    width: 18.7vw;
+    left: 81.3vw;
+    top: 3.4vh;
+    background-image: url(../img/interloper-img.png);
+  }
+  @keyframes twins-around-sun {
+    0% {
+      transform: translate(0, 0);
+    }
+    2% {
+      transform: translate(-5%, 60%) rotate(30deg);
+    }
+    4% {
+      transform: translate(-25%, 120%) rotate(60deg);
+    }
+    6% {
+      transform: translate(-50%, 180%) rotate(90deg);
+    }
+    8% {
+      transform: translate(-80%, 225%) rotate(120deg);
+    }
+    10% {
+      transform: translate(-120%, 275%) rotate(150deg);
+    }
+    12% {
+      transform: translate(-170%, 325%) rotate(180deg);
+    }
+    14% {
+      transform: translate(-230%, 360%) rotate(210deg);
+    }
+    16% {
+      transform: translate(-290%, 400%) rotate(240deg);
+    }
+    18% {
+      transform: translate(-350%, 450%)  rotate(300deg);
+    }
+    20% {
+      visibility: hidden;
+      transform: translate(-500%, 500%) rotate(330deg);
+    }
+    21% {
+      visibility: hidden;
+      transform: translate(-500%, -500%) rotate(-330deg);
+    }
+    80% {
+      visibility: visible;
+      transform: translate(-450%, -480%) rotate(-300deg);
+    }
+    82% {
+      transform: translate(-350%, -420%) rotate(-270deg);
+    }
+    84% {
+      transform: translate(-290%, -375%) rotate(-240deg);
+    }
+    86% {
+      transform: translate(-230%, -340%) rotate(-210deg);
+    }
+    88% {
+      transform: translate(-170%, -300%) rotate(-180deg);
+    }
+    90% {
+      transform: translate(-120%, -260%) rotate(-150deg);
+    }
+    92% {
+      transform: translate(-80%, -225%) rotate(-120deg);
+    }
+    94% {
+      transform: translate(-50%, -180%) rotate(-90deg);
+    }
+    96% {
+      transform: translate(-25%, -120%) rotate(-60deg);
+    }
+    98% {
+      transform: translate(-5%, -60%) rotate(-30deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+  }
+  @keyframes around-sun-1 {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    2% {
+      transform: translate(-5%, 60%) rotate(-25deg);
+    }
+    4% {
+      transform: translate(-15%, 120%) rotate(-50deg);
+    }
+    6% {
+      transform: translate(-25%, 165%) rotate(-75deg);
+    }
+    8% {
+      transform: translate(-40%, 225%) rotate(-100deg);
+    }
+    10% {
+      transform: translate(-55%, 275%) rotate(-125deg);
+    }
+    12% {
+      transform: translate(-70%, 325%) rotate(-150deg);
+    }
+    14% {
+      transform: translate(-90%, 375%) rotate(-175deg);
+    }
+    16% {
+      transform: translate(-110%, 425%) rotate(-200deg);
+    }
+    18% {
+      transform: translate(-150%, 500%) rotate(-225deg);
+    }
+    20% {
+      visibility: hidden;
+      transform: translate(-200%, 580%) rotate(-250deg);
+    }
+    21% {
+      visibility: hidden;
+      transform: translate(-200%, -580%) rotate(-275deg);
+    }
+    80% {
+      visibility: visible;
+      transform: translate(-200%, -580%) rotate(250deg);
+    }
+    82% {
+      transform: translate(-150%, -500%) rotate(225deg);
+    }
+    84% {
+      transform: translate(-110%, -425%) rotate(200deg);
+    }
+    86% {
+      transform: translate(-90%, -375%) rotate(175deg);
+    }
+    88% {
+      transform: translate(-70%, -325%) rotate(150deg);
+    }
+    90% {
+      transform: translate(-55%, -275%) rotate(125deg);
+    }
+    92% {
+      transform: translate(-40%, -225%) rotate(100deg); 
+    }
+    94% {
+      transform: translate(-25%, -165%) rotate(75deg);
+    }
+    96% {
+      transform: translate(-15%, -120%) rotate(50deg);
+    }
+    98% {
+      transform: translate(-5%, -60%) rotate(25deg); 
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+  }
+  @keyframes around-sun-2 {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    2% {
+      transform: translate(-5%, 60%) rotate(20deg);
+    }
+    4% {
+      transform: translate(-15%, 120%) rotate(40deg);
+    }
+    6% {
+      transform: translate(-25%, 165%) rotate(80deg);
+    }
+    8% {
+      transform: translate(-40%, 225%) rotate(100deg);
+    }
+    10% {
+      transform: translate(-55%, 275%) rotate(120deg);
+    }
+    12% {
+      transform: translate(-70%, 325%) rotate(140deg);
+    }
+    14% {
+      transform: translate(-90%, 375%) rotate(160deg);
+    }
+    16% {
+      transform: translate(-110%, 425%) rotate(180deg);
+    }
+    18% {
+      transform: translate(-150%, 500%) rotate(200deg);
+    }
+    20% {
+      visibility: hidden;
+      transform: translate(-200%, 580%) rotate(220deg);
+    }
+    21% {
+      visibility: hidden;
+      transform: translate(-200%, -580%) rotate(240deg);
+    }
+    80% {
+      visibility: visible;
+      transform: translate(-200%, -580%) rotate(-200deg);
+    }
+    82% {
+      transform: translate(-150%, -500%) rotate(-180deg);
+    }
+    84% {
+      transform: translate(-110%, -425%) rotate(-160deg);
+    }
+    86% {
+      transform: translate(-90%, -375%) rotate(-140deg);
+    }
+    88% {
+      transform: translate(-70%, -325%) rotate(-120deg);
+    }
+    90% {
+      transform: translate(-55%, -275%) rotate(-100deg);
+    }
+    92% {
+      transform: translate(-40%, -225%) rotate(-80deg); 
+    }
+    94% {
+      transform: translate(-25%, -165%) rotate(-60deg);
+    }
+    96% {
+      transform: translate(-15%, -120%) rotate(-40deg);
+    }
+    98% {
+      transform: translate(-5%, -60%) rotate(-20deg); 
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+  }
+  @keyframes interloper-around-sun {
+    0% {
+      transform: translate(0);
+    }
+    25% {
+      transform: translate(-150%, -150%);
+    }
+    50% {
+      transform: translate(200%, -200%);
+    }
+    75% {
+      transform: translate(150%, 200%);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+}
+/* ----------Wide-screen css------------- */
+/* -------------------------------------- */
+/* -------------------------------------- */
